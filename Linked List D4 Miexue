@@ -27,3 +27,32 @@ class Pesanan:
     def total_harga(self):
         total = 0
         current = self.head
+            total += current.harga
+            current = current.next
+        return total
+
+def main():
+    pesanan = Pesanan()  # Create an instance of Pesanan class
+
+    # Dictionary to store menu items and their price
+    menu_dict = {
+        "miexue ice creame": 5000,
+        "boba shake": 16000,
+        "mi sundae": 14000,
+        "mi ganas": 11000,
+        "creamy mango boba": 22000  
+    }
+
+    while True:
+        print("""
+        ========WELCOME TO D4 MIE========
+            
+            Miexue Ice Creame = 5000
+            Boba Shake        = 16000
+            Mi Sundae         = 14000
+            Mi Ganas          = 11000
+            Creamy Mango Boba = 22000
+        """)
+
+        print("\n1. Masukkan menu yang anda ingin pesan")
+        print("2. Tampilkan pesanan yang telah di pilih")
